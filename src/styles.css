@@ -7,3 +7,22 @@ body{
 h1{
     margin-left: 40%;
 }
+
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.movie{
+    width: 28%;
+    margin: 2%;
+    border: solid 2px goldenrod;
+    text-align: center;
+    padding: 1%;
+}
+
+img {
+    width: 90%;
+    height: 40vh;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -10,17 +10,14 @@ import { ApiService } from '../api.service';
   styleUrls: ['./homepage.component.css']
 })
 
-export class HomepageComponent implements OnInit {
+export class HomepageComponent  {
   searchText = '';
   movieList: any = [];
-    constructor(private apiService: ApiService) { }
-    ngOnInit() {
-      this.apiService.getNews().subscribe((data)=>{
-        console.log(data);
-        this.movieList=data
-      });
+  constructor(private http: HttpClient) {
+    http.get('http://localhost:8080/movies').subscribe(data => this.movieList = data);
+  }
   
     
   }
-}
+
  
