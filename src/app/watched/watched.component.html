@@ -1,0 +1,9 @@
+<h1>Films Vus</h1>
+
+<ul>
+<ng-container *ngFor="let element of watchedList" >
+    <li *ngIf="element.user_name == username">
+        <p>{{element.movie_title}}</p>
+    </li>
+</ng-container>
+</ul>

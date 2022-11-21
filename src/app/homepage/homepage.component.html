@@ -1,0 +1,19 @@
+
+<h1>SOS CINOCHE</h1>
+
+        <label for="search-text">Search Text</label>
+        <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+          [(ngModel)]="searchText" placeholder="Enter text to search" 
+          autofocus>
+   
+      <ul class="movies">
+        <li class="movie" *ngFor="let movie of movieList | appFilter: searchText">
+          <h2 class="title">{{movie.title}}</h2>
+          <h3 class="director">{{movie.director}}</h3>
+          <img src={{movie.image}} alt="movie image"/>
+          <p class="description">{{movie.description}}</p>
+        </li>
+      </ul>
+
+
+

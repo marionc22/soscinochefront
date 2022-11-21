@@ -1,0 +1,7 @@
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: goldenrod;
+    padding-top: 2%;
+}

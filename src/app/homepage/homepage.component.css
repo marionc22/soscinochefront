@@ -1,0 +1,12 @@
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.movie{
+    width: 28%;
+    margin: 2%;
+    border: solid 2px goldenrod;
+    text-align: center;
+}
