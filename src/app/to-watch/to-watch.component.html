@@ -7,7 +7,8 @@
             <h5 class="director">{{element.movie.director}}</h5>
             <img src={{element.movie.image}} alt="movie image"/>
             <p class="description">{{element.movie.description}}</p>
-            <button type="submit" (click)="deleteWatched(element.id)">supprimer</button>
+            <button type="submit" (click)="addWatched(element.movie.id, element.id)">Je l'ai vu</button>
+            <button type="submit" (click)="deleteWatched(element.id)">Je ne veux plus le voir</button>
         </li>
     </ng-container>
     </ul>

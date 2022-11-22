@@ -35,6 +35,10 @@ input{
     margin: 0;
 }
 
+button{
+    width: 150px;
+}
+
 .welcome{
     color: black;
 }
