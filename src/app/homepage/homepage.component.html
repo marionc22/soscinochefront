@@ -1,0 +1,26 @@
+<div class="banniere">
+    <h1><span class="welcome"> Bienvenue </span> <span class="username">ReyduCul</span></h1>
+    <h4>Que vas tu regarder aujourd'hui?</h4>
+</div>
+<div class="scearch"> <label for="search-text">Cherches un film</label><br />
+    <input type="email" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="searchText" placeholder="Nom du film" autofocus>
+</div>
+<button class="random" type="submit" (click)="shuffle()">Proposes moi des films</button>
+<ul class="movies">
+    <li class="movie" *ngFor="let movie of movieList | appFilter: searchText">
+        <h2 class="title">{{movie.title}}</h2>
+        <h5 class="director">{{movie.director}}</h5>
+        <img src={{movie.image}} alt="movie image" />
+        <p class="description">{{movie.description}}</p>
+        <div class="buttons">
+            <div>
+                <button type="submit" (click)="addWatched(movie.id)"> Déjà Vu </button>
+                <p *ngIf="showWatched===movie.id">Ajouté</p>
+            </div>
+            <div>
+                <button type="submit" (click)="addToWatch(movie.id)"> Je veux le voir </button>
+                <p *ngIf="showToWatch===movie.id">Ajouté</p>
+            </div>
+        </div>
+    </li>
+</ul>

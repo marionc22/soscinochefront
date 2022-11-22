@@ -1,0 +1,35 @@
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: goldenrod;
+    text-align: center;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+    height: 40px;
+    padding-top: 10px;
+    font-weight: bold;
+    
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+    
+}
+
+.logo{
+    width: 18%;
+    top:2px;
+    height: auto;
+    position: absolute;
+    left: 8px;
+}
+
+
