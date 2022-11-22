@@ -8,20 +8,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ToWatchComponent {
 
-  username : String = "mariontotottes"
+  username : String = "reyducul"
 
   toWatchList: any =[];
   
-  // constructor(private apiService: ApiService) { }
-
-  // ngOnInit(): void {
-  //    this.apiService.getToWatch().subscribe((data)=>{
-  //       console.log(data);
-  //       this.toWatchList=data
-  //     });
-  //     console.log(this.toWatchList)
   constructor(private http: HttpClient) {
-    http.get('http://localhost:8080/toWatch').subscribe(data => this.toWatchList = data);
+    http.get('http://localhost:8080/towatch').subscribe(data => this.toWatchList = data);
   }
+
+  deleteWatched (id: Number) {
+    
+    this.http.delete(`http://localhost:8080/towatch/${id}`)
+    .subscribe(() => 'Delete successful');
+    this.toWatchList = this.toWatchList.filter((movie: any) => movie.id != id)
+}
   }
+  
 

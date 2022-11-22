@@ -1,12 +1,12 @@
-<h1>Films Vus</h1>
+<h1 >Films Vus</h1>
 
 <ul class="movies">
 <ng-container  *ngFor="let element of watchedList" >
     <li class="movie" *ngIf="element.username == username">
         <h2 class="title">{{element.movie.title}}</h2>
-        <h3 class="director">{{element.movie.director}}</h3>
+        <h5 class="director">{{element.movie.director}}</h5>
         <img src={{element.movie.image}} alt="movie image"/>
-        <p class="description">{{element.movie.description}}</p>
+        <button type="submit" (click)="deleteWatched(element.id)">supprimer</button>
     </li>
 </ng-container>
 </ul>

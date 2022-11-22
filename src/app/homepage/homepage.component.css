@@ -1,0 +1,44 @@
+
+.username{
+    color: goldenrod;
+}
+
+.random{
+    width: 20%;
+    margin-bottom: 0;
+}
+
+.scearch{
+    margin-top: 2%;
+    text-align: center;
+    font-size: large;
+    margin-bottom: -3.5%;
+    color: goldenrod;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: goldenrod 1px solid;
+}
+
+input{
+    border-radius: 5px;
+    height: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons p {
+    margin: 0;
+}
+
+.welcome{
+    color: black;
+}
+
+.random{
+    margin-left: 6%;
+}

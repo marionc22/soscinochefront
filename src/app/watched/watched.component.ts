@@ -16,6 +16,13 @@ export class WatchedComponent  {
   constructor(private http: HttpClient) {
     http.get('http://localhost:8080/watched').subscribe(data => this.watchedList = data);
   }
+
+  deleteWatched (id: Number) {
+    
+    this.http.delete(`http://localhost:8080/watched/${id}`)
+    .subscribe(() => 'Delete successful');
+    this.watchedList = this.watchedList.filter((movie: any) => movie.id != id)
+}
   }
 
 

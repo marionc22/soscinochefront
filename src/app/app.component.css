@@ -1,3 +1,4 @@
-body {
-    background-color: green ;
-  }
+::ng-deep * {
+  margin: none;
+  padding: none;
+}
