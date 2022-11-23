@@ -1,11 +1,14 @@
 <ul>
     <li>
-      <a [routerLink]="['/']"><img class="logo" src="../../assets/logo.png" alt="logo"></a>
+      <a [routerLink]="['/home']"><img class="logo" src="../../assets/logo.png" alt="logo"></a>
     </li>
     <li>
       <a [routerLink]="['/vus']">Films vus</a>
     </li>
     <li>
         <a [routerLink]="['/avoir']">Films à voir</a>
+      </li>
+      <li>
+        <button type="submit" (click)="deconnect()">deconnexion</button>
       </li>
   </ul>

@@ -1,13 +1,15 @@
 <h1>Films A Voir</h1>
 
 <ul class="movies">
-    <ng-container  *ngFor="let element of toWatchList" >
+
+    <ng-container *ngFor="let element of toWatchList">
         <li class="movie" *ngIf="element.username == username">
             <h2 class="title">{{element.movie.title}}</h2>
             <h5 class="director">{{element.movie.director}}</h5>
-            <img src={{element.movie.image}} alt="movie image"/>
+            <img src={{element.movie.image}} alt="movie image" />
             <p class="description">{{element.movie.description}}</p>
-            <button type="submit" (click)="deleteWatched(element.id)">supprimer</button>
+            <button type="submit" (click)="addWatched(element.movie.id, element.id)">Je l'ai vu</button>
+            <button type="submit" (click)="deleteWatched(element.id)">Je ne veux plus le voir</button>
         </li>
     </ng-container>
-    </ul>
+</ul>

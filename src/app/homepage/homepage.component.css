@@ -1,14 +1,13 @@
-
-.username{
+.username {
     color: goldenrod;
 }
 
-.random{
+.random {
     width: 20%;
     margin-bottom: 0;
 }
 
-.scearch{
+.scearch {
     margin-top: 2%;
     text-align: center;
     font-size: large;
@@ -21,12 +20,12 @@ input:focus {
     outline: goldenrod 1px solid;
 }
 
-input{
+input {
     border-radius: 5px;
     height: 20px;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: space-around;
 }
@@ -35,10 +34,14 @@ input{
     margin: 0;
 }
 
-.welcome{
+button {
+    width: 150px;
+}
+
+.welcome {
     color: black;
 }
 
-.random{
+.random {
     margin-left: 6%;
 }
